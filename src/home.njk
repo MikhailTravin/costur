@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Главная</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="block-reviews">
+                <div class="container">
+                    <img loading="lazy" src="img/icons/line1.svg" alt="" class="block-reviews__bg">
+                    <div class="block-reviews__content">
+                        <div class="heading-complex">
+                            <h2 class="title2">
+                                Отзывы
+                            </h2>
+                        </div>
+                        <div class="block-reviews__body">
+                            <div class="block-reviews__slider swiper">
+                                <div class="block-reviews__wrapper swiper-wrapper">
+                                    <div class="block-reviews__slide swiper-slide">
+                                        <a href="img/reviews/image1.webp" data-fancybox="reviews1" class="card-reviews">
+                                            <img loading="lazy" src="img/reviews/image1.webp" alt=""
+                                                class="card-reviews__pic1">
+                                            <div class="zoom">
+                                                <svg aria-hidden="true" width="21" height="21">
+                                                    <use xlink:href="img/sprite.svg#zoom"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="block-reviews__slide swiper-slide">
+                                        <a href="img/reviews/image2.webp" data-fancybox="reviews1" class="card-reviews">
+                                            <img loading="lazy" src="img/reviews/image2.webp" alt=""
+                                                class="card-reviews__pic1">
+                                            <div class="zoom">
+                                                <svg aria-hidden="true" width="21" height="21">
+                                                    <use xlink:href="img/sprite.svg#zoom"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="block-reviews__slide swiper-slide">
+                                        <a href="img/reviews/image3.webp" data-fancybox="reviews1" class="card-reviews">
+                                            <img loading="lazy" src="img/reviews/image3.webp" alt=""
+                                                class="card-reviews__pic1">
+                                            <div class="zoom">
+                                                <svg aria-hidden="true" width="21" height="21">
+                                                    <use xlink:href="img/sprite.svg#zoom"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="block-reviews__slide swiper-slide">
+                                        <a href="img/reviews/image4.webp" data-fancybox="reviews1" class="card-reviews">
+                                            <img loading="lazy" src="img/reviews/image4.webp" alt=""
+                                                class="card-reviews__pic1">
+                                            <div class="zoom">
+                                                <svg aria-hidden="true" width="21" height="21">
+                                                    <use xlink:href="img/sprite.svg#zoom"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="block-reviews__slide swiper-slide">
+                                        <a href="img/reviews/image5.webp" data-fancybox="reviews1" class="card-reviews">
+                                            <img loading="lazy" src="img/reviews/image5.webp" alt=""
+                                                class="card-reviews__pic1">
+                                            <div class="zoom">
+                                                <svg aria-hidden="true" width="21" height="21">
+                                                    <use xlink:href="img/sprite.svg#zoom"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="block-reviews__slide swiper-slide">
+                                        <a href="img/reviews/image1.webp" data-fancybox="reviews1" class="card-reviews">
+                                            <img loading="lazy" src="img/reviews/image1.webp" alt=""
+                                                class="card-reviews__pic1">
+                                            <div class="zoom">
+                                                <svg aria-hidden="true" width="21" height="21">
+                                                    <use xlink:href="img/sprite.svg#zoom"></use>
+                                                </svg>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-nav">
+                                <button type="button" class="reviews-arrow-prev slider-nav-arrow arrow-prev">
+                                    <svg aria-hidden="true" width="12" height="19">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="reviews-arrow-next slider-nav-arrow arrow-next">
+                                    <svg aria-hidden="true" width="12" height="19">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-popular">
+                <img loading="lazy" src="img/bg1.webp" alt="" class="block-popular__bg1 bg1">
+                <img loading="lazy" src="img/bg2.webp" alt="" class="block-popular__bg2 bg2">
+                <div class="container">
+                    <img loading="lazy" src="img/icons/line2.svg" alt="" class="block-popular__line">
+                    <div class="block-popular__content">
+                        <div class="heading-complex">
+                            <h2 class="title2">
+                                Популярные направления
+                            </h2>
+                        </div>
+                        <div class="block-popular__body">
+                            <a href="./" class="block-popular__column">
+                                <img loading="lazy" src="img/popular/image1.webp" alt="" class="block-popular__pic1">
+                                <div class="block-popular__item">
+                                    <div class="block-popular__titles">
+                                        <div class="block-popular__title">
+                                            Производства
+                                        </div>
+                                        <p>
+                                            Фабрики мороженого, шоколада
+                                        </p>
+                                    </div>
+                                    <div class="block-popular__button">
+                                        <div class="btn"><span>Смотреть</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="./" class="block-popular__column">
+                                <img loading="lazy" src="img/popular/image2.webp" alt="" class="block-popular__pic1">
+                                <div class="block-popular__item">
+                                    <div class="block-popular__titles">
+                                        <div class="block-popular__title">
+                                            Музеи Москвы
+                                        </div>
+                                        <p>
+                                            Третьяковка, Дарвиновский
+                                        </p>
+                                    </div>
+                                    <div class="block-popular__button">
+                                        <div class="btn"><span>Смотреть</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="./" class="block-popular__column">
+                                <img loading="lazy" src="img/popular/image3.webp" alt="" class="block-popular__pic1">
+                                <div class="block-popular__item">
+                                    <div class="block-popular__titles">
+                                        <div class="block-popular__title">
+                                            Золотое Кольцо
+                                        </div>
+                                        <p>
+                                            Суздаль, Ярославль, Кострома
+                                        </p>
+                                    </div>
+                                    <div class="block-popular__button">
+                                        <div class="btn"><span>Смотреть</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="./" class="block-popular__column">
+                                <img loading="lazy" src="img/popular/image4.webp" alt="" class="block-popular__pic1">
+                                <div class="block-popular__item">
+                                    <div class="block-popular__titles">
+                                        <div class="block-popular__title">
+                                            Патриотические
+                                        </div>
+                                        <p>
+                                            Парк Патриот, Музей Победы
+                                        </p>
+                                    </div>
+                                    <div class="block-popular__button">
+                                        <div class="btn"><span>Смотреть</span></div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-forms block-main-forms">
+                <div class="container">
+                    <div class="block-forms__content">
+                        <img loading="lazy" src="img/image1.webp" alt="" class="block-forms__pic1">
+                        <img loading="lazy" src="img/image2.webp" alt="" class="block-forms__pic2">
+                        <img loading="lazy" src="img/icons/line3.svg" alt="" class="block-forms__line1">
+                        <img loading="lazy" src="img/icons/line4.svg" alt="" class="block-forms__line2">
+                        <div class="block-forms__body">
+                            <div class="heading-complex">
+                                <h2 class="title2">
+                                    Оставьте заявку
+                                </h2>
+                                <p>
+                                    И мы подберём тур, подходящий именно вам
+                                </p>
+                            </div>
+                            <form data-dev data-popup-message="#thanks" action="#" class="form">
+                                <div class="form__inputs">
+                                    <div class="form__input">
+                                        <input data-required autocomplete="off" type="text" name="form[]"
+                                            placeholder="Имя (Учитель/Родитель) *" class="input">
+                                    </div>
+                                    <div class="form__input">
+                                        <input data-required autocomplete="off" type="text" name="form[]"
+                                            placeholder="Номер телефона *" class="input">
+                                    </div>
+                                    <div class="form__input">
+                                        <input autocomplete="off" type="text" name="form[]"
+                                            placeholder="Количество детей" class="input">
+                                    </div>
+                                    <div class="form__input">
+                                        <input autocomplete="off" type="text" name="form[]"
+                                            placeholder="Номер школы/класс" class="input">
+                                    </div>
+                                </div>
+                                <div class="form__buttons">
+                                    <label class="checkbox">
+                                        <input checked data-required class="checkbox__input" type="checkbox" value="1"
+                                            name="form[]">
+                                        <span class="checkbox__label">
+                                            <span class="checkbox__icon">
+                                                <svg aria-hidden="true" width="12" height="12">
+                                                    <use xlink:href="img/sprite.svg#check1"></use>
+                                                </svg>
+                                            </span>
+                                            <span class="checkbox__text">
+                                                <span>Согласие на обработку<br> <a href="./">персональных
+                                                        данных</a></span>
+                                            </span>
+                                        </span>
+                                    </label>
+                                    <button type="submit" class="btn">
+                                        <span>Рассчитать стоимость поездки для класса</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-faq">
+                <div class="container">
+                    <div class="block-faq__content">
+                        <div class="heading-complex">
+                            <h2 class="title2">
+                                Вопросы учителей и родителей
+                            </h2>
+                        </div>
+                        <div class="block-faq__body">
+                            <img loading="lazy" src="img/image3.webp" alt="" class="block-faq__pic1">
+                            <div class="block-faq__spollers">
+                                <div data-simplebar class="block-faq__simplebar">
+                                    <div data-spollers class="spollers-faq">
+                                        <div class="spollers-faq__item">
+                                            <button type="button" data-spoller class="spollers-faq__button">
+                                                <span class="spollers-faq__title">
+                                                    Какие документы нужны для поездки?
+                                                </span>
+                                                <span class="spollers-faq__icon">
+                                                    <span></span>
+                                                </span>
+                                            </button>
+                                            <div class="spollers-faq__body">
+                                                <div class="spollers-faq__text">
+                                                    <p>
+                                                        Хотите узнать историю города? Присоединяйтесь к нашим ежедневным
+                                                        групповым экскурсиям в Костроме и окрестностям.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers-faq__item">
+                                            <button type="button" data-spoller class="spollers-faq__button">
+                                                <span class="spollers-faq__title">
+                                                    За сколько дней нужно бронировать?
+                                                </span>
+                                                <span class="spollers-faq__icon">
+                                                    <span></span>
+                                                </span>
+                                            </button>
+                                            <div class="spollers-faq__body">
+                                                <div class="spollers-faq__text">
+                                                    <p>
+                                                        Хотите узнать историю города? Присоединяйтесь к нашим ежедневным
+                                                        групповым экскурсиям в Костроме и окрестностям.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers-faq__item">
+                                            <button type="button" data-spoller class="spollers-faq__button">
+                                                <span class="spollers-faq__title">
+                                                    Какие автобусы вы предоставляете?
+                                                </span>
+                                                <span class="spollers-faq__icon">
+                                                    <span></span>
+                                                </span>
+                                            </button>
+                                            <div class="spollers-faq__body">
+                                                <div class="spollers-faq__text">
+                                                    <p>
+                                                        Хотите узнать историю города? Присоединяйтесь к нашим ежедневным
+                                                        групповым экскурсиям в Костроме и окрестностям.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers-faq__item">
+                                            <button type="button" data-spoller class="spollers-faq__button">
+                                                <span class="spollers-faq__title">
+                                                    Что если ребенок заболел (возврат)?
+                                                </span>
+                                                <span class="spollers-faq__icon">
+                                                    <span></span>
+                                                </span>
+                                            </button>
+                                            <div class="spollers-faq__body">
+                                                <div class="spollers-faq__text">
+                                                    <p>
+                                                        Хотите узнать историю города? Присоединяйтесь к нашим ежедневным
+                                                        групповым экскурсиям в Костроме и окрестностям.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers-faq__item">
+                                            <button type="button" data-spoller class="spollers-faq__button">
+                                                <span class="spollers-faq__title">
+                                                    Какие документы нужны для поездки?
+                                                </span>
+                                                <span class="spollers-faq__icon">
+                                                    <span></span>
+                                                </span>
+                                            </button>
+                                            <div class="spollers-faq__body">
+                                                <div class="spollers-faq__text">
+                                                    <p>
+                                                        Хотите узнать историю города? Присоединяйтесь к нашим ежедневным
+                                                        групповым экскурсиям в Костроме и окрестностям.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers-faq__item">
+                                            <button type="button" data-spoller class="spollers-faq__button">
+                                                <span class="spollers-faq__title">
+                                                    Какие документы нужны для поездки?
+                                                </span>
+                                                <span class="spollers-faq__icon">
+                                                    <span></span>
+                                                </span>
+                                            </button>
+                                            <div class="spollers-faq__body">
+                                                <div class="spollers-faq__text">
+                                                    <p>
+                                                        Хотите узнать историю города? Присоединяйтесь к нашим ежедневным
+                                                        групповым экскурсиям в Костроме и окрестностям.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="spollers-faq__item">
+                                            <button type="button" data-spoller class="spollers-faq__button">
+                                                <span class="spollers-faq__title">
+                                                    За сколько дней нужно бронировать?
+                                                </span>
+                                                <span class="spollers-faq__icon">
+                                                    <span></span>
+                                                </span>
+                                            </button>
+                                            <div class="spollers-faq__body">
+                                                <div class="spollers-faq__text">
+                                                    <p>
+                                                        Хотите узнать историю города? Присоединяйтесь к нашим ежедневным
+                                                        групповым экскурсиям в Костроме и окрестностям.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-section">
+                <img loading="lazy" src="img/bg1.webp" alt="" class="block-section__bg1 bg1">
+                <div class="container">
+                    <img loading="lazy" src="img/icons/line5.svg" alt="" class="block-section__line">
+                    <div class="block-section__content">
+                        <div class="heading-complex">
+                            <h2 class="title2">
+                                Полезные материалы
+                            </h2>
+                        </div>
+                        <div class="block-section__body">
+                            <div class="block-section__slider swiper">
+                                <div class="block-section__wrapper swiper-wrapper">
+                                    <div class="block-section__slide swiper-slide">
+                                        <a href="./" class="card-news">
+                                            <div class="card-news__image">
+                                                <div class="card-news__badge">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>19.07.2025</span>
+                                                </div>
+                                                <img loading="lazy" src="img/news/image1.webp" alt=""
+                                                    class="card-news__pic1">
+                                            </div>
+                                            <div class="card-news__item">
+                                                <div class="card-news__title">
+                                                    Куда поехать с 5 классом
+                                                </div>
+                                                <p>
+                                                    Хотите узнать историю города?<br> Присоединяйтесь к нашим ежедневным
+                                                    групповым экскурсиям в Костроме и окрестностям.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="block-section__slide swiper-slide">
+                                        <a href="./" class="card-news">
+                                            <div class="card-news__image">
+                                                <div class="card-news__badge">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>19.07.2025</span>
+                                                </div>
+                                                <img loading="lazy" src="img/news/image2.webp" alt=""
+                                                    class="card-news__pic1">
+                                            </div>
+                                            <div class="card-news__item">
+                                                <div class="card-news__title">
+                                                    Вдохновители запустили проект-хронику
+                                                </div>
+                                                <p>
+                                                    Хотите узнать историю города?<br> Присоединяйтесь к нашим ежедневным
+                                                    групповым экскурсиям в Костроме.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="block-section__slide swiper-slide">
+                                        <a href="./" class="card-news">
+                                            <div class="card-news__image">
+                                                <div class="card-news__badge">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>19.07.2025</span>
+                                                </div>
+                                                <img loading="lazy" src="img/news/image3.webp" alt=""
+                                                    class="card-news__pic1">
+                                            </div>
+                                            <div class="card-news__item">
+                                                <div class="card-news__title">
+                                                    Ожерелье московских усадеб
+                                                </div>
+                                                <p>
+                                                    Хотите узнать историю города?<br> Присоединяйтесь к нашим ежедневным
+                                                    групповым экскурсиям в Костроме и окрестностям.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="block-section__slide swiper-slide">
+                                        <a href="./" class="card-news">
+                                            <div class="card-news__image">
+                                                <div class="card-news__badge">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>19.07.2025</span>
+                                                </div>
+                                                <img loading="lazy" src="img/news/image1.webp" alt=""
+                                                    class="card-news__pic1">
+                                            </div>
+                                            <div class="card-news__item">
+                                                <div class="card-news__title">
+                                                    Куда поехать с 5 классом
+                                                </div>
+                                                <p>
+                                                    Хотите узнать историю города?<br> Присоединяйтесь к нашим ежедневным
+                                                    групповым экскурсиям в Костроме и окрестностям.
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-nav">
+                                <button type="button" class="section-arrow-prev slider-nav-arrow arrow-prev">
+                                    <svg aria-hidden="true" width="12" height="19">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </button>
+                                <button type="button" class="section-arrow-next slider-nav-arrow arrow-next">
+                                    <svg aria-hidden="true" width="12" height="19">
+                                        <use xlink:href="img/sprite.svg#arrow1"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-safety">
+                <img loading="lazy" src="img/image4.webp" alt="" class="block-safety__bg1">
+                <div class="container">
+                    <div class="block-safety__contents">
+                        <img loading="lazy" src="img/icons/line3.svg" alt="" class="block-safety__line1">
+                        <img loading="lazy" src="img/icons/line6.svg" alt="" class="block-safety__line2">
+                        <div class="block-safety__content">
+                            <div class="heading-complex">
+                                <h2 class="title2">
+                                    Безопасность и документы
+                                </h2>
+                                <p>
+                                    Берем на себя оформление всех документов для РОНО/Департамента образования
+                                </p>
+                            </div>
+                            <div class="block-safety__body">
+                                <div class="block-safety__column">
+                                    <div class="block-safety__icon">
+                                        <img loading="lazy" src="img/icons/check2.svg" alt="">
+                                    </div>
+                                    <p>
+                                        Лицензия
+                                    </p>
+                                </div>
+                                <div class="block-safety__column">
+                                    <div class="block-safety__icon">
+                                        <img loading="lazy" src="img/icons/check2.svg" alt="">
+                                    </div>
+                                    <p>
+                                        ГИБДД
+                                    </p>
+                                </div>
+                                <div class="block-safety__column">
+                                    <div class="block-safety__icon">
+                                        <img loading="lazy" src="img/icons/check2.svg" alt="">
+                                    </div>
+                                    <p>
+                                        Страхование
+                                    </p>
+                                </div>
+                                <div class="block-safety__column">
+                                    <div class="block-safety__icon">
+                                        <img loading="lazy" src="img/icons/check2.svg" alt="">
+                                    </div>
+                                    <p>
+                                        Аттестованные
+                                        гиды
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>
