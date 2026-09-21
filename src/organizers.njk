@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Организаторам</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="block-main">
+                <img src="img/bg4.webp" alt="" class="block-main__bg1 bg2">
+                <img src="img/icons/line7.svg" alt="" class="block-main__line1">
+                <div class="container">
+                    <div class="block-main__content">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li><span>Организаторам</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="title1">Организаторам</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-organizers">
+                <div class="container">
+                    <div class="block-organizers__contents">
+                        <div class="block-organizers__content">
+                            <svg aria-hidden="true" width="80" height="68">
+                                <use xlink:href="img/sprite.svg#quote2"></use>
+                            </svg>
+                            <div class="block-organizers__body">
+                                <h3 class="title3">
+                                    Уважаемые коллеги, учителя и родители!
+                                </h3>
+                                <p>
+                                    Мы понимаем, как сложно организовать поездку для класса, совместив образовательную
+                                    программу, безопасность детей и бюджет. Мы здесь, чтобы взять на себя всю логистику,
+                                    а
+                                    вы получили максимум пользы и положительных эмоций
+                                </p>
+                            </div>
+                            <svg aria-hidden="true" width="80" height="68">
+                                <use xlink:href="img/sprite.svg#quote2"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

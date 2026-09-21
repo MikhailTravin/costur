@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Новости</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="block-main">
+                <img src="img/bg4.webp" alt="" class="block-main__bg1 bg2">
+                <img src="img/icons/line7.svg" alt="" class="block-main__line1">
+                <div class="container">
+                    <div class="block-main__content">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li><span>Новости</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="title1">Новости</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-category2">
+                <div class="container">
+                    <div class="block-category2__content">
+                        <div class="filter-sorting">
+                            <button data-filter="all" type="button" class="filter-sorting__button active">
+                                <span>Все новости</span>
+                            </button>
+                            <button data-filter="filter1" type="button" class="filter-sorting__button">
+                                <span>Праздники</span>
+                            </button>
+                            <button data-filter="filter2" type="button" class="filter-sorting__button">
+                                <span>События</span>
+                            </button>
+                            <button data-filter="filter3" type="button" class="filter-sorting__button">
+                                <span>Экскурсии</span>
+                            </button>
+                            <button data-filter="filter4" type="button" class="filter-sorting__button">
+                                <span>Полезная информация</span>
+                            </button>
+                        </div>
+                        <div class="block-category2__body">
+                            <div class="block-category2__cards">
+                                <a data-filter="filter1" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image1.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Куда поехать с 5 классом
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме и окрестностям.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a data-filter="filter2" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image2.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Вдохновители запустили проект-хронику
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a data-filter="filter3" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image3.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Ожерелье московских усадеб
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме и окрестностям.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a data-filter="filter4" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image3.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Ожерелье московских усадеб
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме и окрестностям.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a data-filter="filter1" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image1.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Куда поехать с 5 классом
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме и окрестностям.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a data-filter="filter2" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image2.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Вдохновители запустили проект-хронику
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a data-filter="filter3" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image1.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Куда поехать с 5 классом
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме и окрестностям.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a data-filter="filter4" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image2.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Вдохновители запустили проект-хронику
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a data-filter="filter1" href="./" class="card-news filter-card">
+                                    <div class="card-news__image">
+                                        <div class="card-news__badge">
+                                            <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                            <span>19.07.2025</span>
+                                        </div>
+                                        <img loading="lazy" src="img/news/image3.webp" alt="" class="card-news__pic1">
+                                    </div>
+                                    <div class="card-news__item">
+                                        <div class="card-news__title">
+                                            Ожерелье московских усадеб
+                                        </div>
+                                        <p>
+                                            Хотите узнать историю города?<br> Присоединяйтесь к нашим
+                                            ежедневным
+                                            групповым экскурсиям в Костроме и окрестностям.
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            {% include 'blocks/pagging.njk' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% include 'blocks/forms.njk' %}
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>
