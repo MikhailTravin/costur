@@ -206,6 +206,41 @@ document.querySelectorAll('.block-section__slider').forEach((sliderEl) => {
   });
 });
 
+if (document.querySelector('.images-product')) {
+  const thumbsSwiper = new Swiper('.images-product__thumb', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 2.5,
+    spaceBetween: 10,
+    speed: 400,
+    preloadImages: true,
+    breakpoints: {
+      550: {
+        slidesPerView: 4, spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 4, spaceBetween: 20,
+      },
+    },
+  });
+
+  const mainThumbsSwiper = new Swiper('.images-product__slider', {
+    thumbs: {
+      swiper: thumbsSwiper
+    },
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 400,
+    preloadImages: true,
+    navigation: {
+      prevEl: '.images-product__arrow-prev',
+      nextEl: '.images-product__arrow-next',
+    },
+  });
+}
+
 //========================================================================================================================================================
 
 Fancybox.bind("[data-fancybox]", {
@@ -1553,6 +1588,258 @@ if (filterCards) {
       filterCardsByValue(filterValue || 'all');
     });
   });
+}
+
+//========================================================================================================================================================
+
+function showMore() {
+  window.addEventListener("load", function (e) {
+    const showMoreBlocks = document.querySelectorAll('[data-showmore]');
+    let showMoreBlocksRegular;
+    let mdQueriesArray;
+    if (showMoreBlocks.length) {
+      showMoreBlocksRegular = Array.from(showMoreBlocks).filter(function (item, index, self) {
+        return !item.dataset.showmoreMedia;
+      });
+      showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+
+      document.addEventListener("click", showMoreActions);
+      window.addEventListener("resize", showMoreActions);
+
+      mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
+      if (mdQueriesArray && mdQueriesArray.length) {
+        mdQueriesArray.forEach(mdQueriesItem => {
+          mdQueriesItem.matchMedia.addEventListener("change", function () {
+            initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+          });
+        });
+        initItemsMedia(mdQueriesArray);
+      }
+    }
+    function initItemsMedia(mdQueriesArray) {
+      mdQueriesArray.forEach(mdQueriesItem => {
+        initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+      });
+    }
+    function initItems(showMoreBlocks, matchMedia) {
+      showMoreBlocks.forEach(showMoreBlock => {
+        initItem(showMoreBlock, matchMedia);
+      });
+    }
+    function initItem(showMoreBlock, matchMedia = false) {
+      showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
+      let showMoreContent = showMoreBlock.querySelectorAll('[data-showmore-content]');
+      let showMoreButton = showMoreBlock.querySelectorAll('[data-showmore-button]');
+      showMoreContent = Array.from(showMoreContent).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
+      showMoreButton = Array.from(showMoreButton).filter(item => item.closest('[data-showmore]') === showMoreBlock)[0];
+      const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+      if (matchMedia.matches || !matchMedia) {
+        if (hiddenHeight < getOriginalHeight(showMoreContent)) {
+          _slideUp(showMoreContent, 0, showMoreBlock.classList.contains('_showmore-active') ? getOriginalHeight(showMoreContent) : hiddenHeight);
+          showMoreButton.hidden = false;
+        } else {
+          _slideDown(showMoreContent, 0, hiddenHeight);
+          showMoreButton.hidden = true;
+        }
+      } else {
+        _slideDown(showMoreContent, 0, hiddenHeight);
+        showMoreButton.hidden = true;
+      }
+    }
+    function getHeight(showMoreBlock, showMoreContent) {
+      let hiddenHeight = 0;
+      const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : 'size';
+      const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) ? parseFloat(getComputedStyle(showMoreContent).rowGap) : 0;
+      if (showMoreType === 'items') {
+        let showMoreTypeValue = showMoreContent.dataset.showmoreContent ? parseInt(showMoreContent.dataset.showmoreContent) : 3;
+        const showMoreItems = showMoreContent.children;
+        showMoreTypeValue = Math.min(showMoreTypeValue, showMoreItems.length);
+        for (let index = 1; index <= showMoreTypeValue; index++) {
+          const showMoreItem = showMoreItems[index - 1];
+          const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) ? parseFloat(getComputedStyle(showMoreItem).marginTop) : 0;
+          const marginBottom = parseFloat(getComputedStyle(showMoreItem).marginBottom) ? parseFloat(getComputedStyle(showMoreItem).marginBottom) : 0;
+          hiddenHeight += showMoreItem.offsetHeight + marginTop;
+          if (index == showMoreTypeValue) break;
+          hiddenHeight += marginBottom;
+        }
+        rowGap ? hiddenHeight += (showMoreTypeValue - 1) * rowGap : null;
+      } else {
+        const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? parseInt(showMoreContent.dataset.showmoreContent) : 150;
+        hiddenHeight = showMoreTypeValue;
+      }
+      return hiddenHeight;
+    }
+
+    function getOriginalHeight(showMoreContent) {
+      let parentHidden;
+      let hiddenHeight = showMoreContent.offsetHeight;
+      showMoreContent.style.removeProperty('height');
+      if (showMoreContent.closest(`[hidden]`)) {
+        parentHidden = showMoreContent.closest(`[hidden]`);
+        parentHidden.hidden = false;
+      }
+      let originalHeight = showMoreContent.offsetHeight;
+      parentHidden ? parentHidden.hidden = true : null;
+      showMoreContent.style.height = `${hiddenHeight}px`;
+      return originalHeight;
+    }
+    function showMoreActions(e) {
+      const targetEvent = e.target;
+      const targetType = e.type;
+      if (targetType === 'click') {
+        if (targetEvent.closest('[data-showmore-button]')) {
+          const showMoreButton = targetEvent.closest('[data-showmore-button]');
+          const showMoreBlock = showMoreButton.closest('[data-showmore]');
+          const showMoreContent = showMoreBlock.querySelector('[data-showmore-content]');
+          const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : '500';
+          const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+          if (!showMoreContent.classList.contains('_slide')) {
+            showMoreBlock.classList.contains('_showmore-active') ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+            showMoreBlock.classList.toggle('_showmore-active');
+          }
+        }
+      } else if (targetType === 'resize') {
+        showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+        mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
+      }
+    }
+  });
+}
+showMore();
+
+//========================================================================================================================================================
+
+//Звездный рейтинг
+function formRating() {
+  const ratings = document.querySelectorAll('[data-rating]');
+  if (ratings) {
+    ratings.forEach(rating => {
+      const ratingValue = +rating.dataset.ratingValue;
+      const ratingSize = +rating.dataset.ratingSize ? +rating.dataset.ratingSize : 5;
+      formRatingInit(rating, ratingSize);
+      ratingValue ? formRatingSet(rating, ratingValue) : null;
+      document.addEventListener('click', formRatingAction);
+    });
+  }
+
+  function formRatingAction(e) {
+    const targetElement = e.target;
+    if (targetElement.closest('.rating__input')) {
+      const currentElement = targetElement.closest('.rating__input');
+      const ratingValue = +currentElement.value;
+      const rating = currentElement.closest('.rating');
+      const ratingSet = rating.dataset.rating === 'set';
+      ratingSet ? formRatingGet(rating, ratingValue) : null;
+    }
+  }
+
+  function formRatingInit(rating, ratingSize) {
+    let ratingItems = ``;
+    for (let index = 0; index < ratingSize; index++) {
+      index === 0 ? ratingItems += `<div class="rating__items">` : null;
+      ratingItems += `
+                <label class="rating__item">
+                    <input class="rating__input" type="radio" name="rating" value="${index + 1}">
+                </label>`;
+      index === ratingSize ? ratingItems += `</div">` : null;
+    }
+    rating.insertAdjacentHTML("beforeend", ratingItems);
+  }
+
+  function formRatingGet(rating, ratingValue) {
+    const resultRating = ratingValue;
+    formRatingSet(rating, resultRating);
+  }
+
+  function formRatingSet(rating, value) {
+    const ratingItems = rating.querySelectorAll('.rating__item');
+    const resultFullItems = parseInt(value);
+    const resultPartItem = value - resultFullItems;
+
+    rating.hasAttribute('data-rating-title') ? rating.title = value : null;
+
+    ratingItems.forEach((ratingItem, index) => {
+      ratingItem.classList.remove('rating__item--active');
+      ratingItem.querySelector('span') ? ratingItems[index].querySelector('span').remove() : null;
+
+      if (index <= (resultFullItems - 1)) {
+        ratingItem.classList.add('rating__item--active');
+      }
+      if (index === resultFullItems && resultPartItem) {
+        ratingItem.insertAdjacentHTML("beforeend", `<span style="width:${resultPartItem * 100}%"></span>`);
+      }
+    });
+  }
+
+  function formRatingSend() {
+  }
+}
+formRating();
+
+//========================================================================================================================================================
+
+const mapElement = document.querySelector('#map');
+if (mapElement) {
+  const mapObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        mapObserver.unobserve(mapElement);
+
+        if (typeof ymaps === 'undefined') {
+          const script = document.createElement('script');
+          script.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU';
+          script.async = true;
+
+          script.onload = () => {
+            if (typeof ymaps !== 'undefined') {
+              ymaps.ready(safeInitMap);
+            }
+          };
+
+          script.onerror = () => {
+            console.error('Yandex Maps failed to load');
+          };
+
+          document.head.appendChild(script);
+        } else {
+          ymaps.ready(safeInitMap);
+        }
+      }
+    });
+  }, {
+    rootMargin: '0px 0px 200px 0px'
+  });
+
+  mapObserver.observe(mapElement);
+}
+function safeInitMap() {
+  const mapElement = document.getElementById('map');
+  if (!mapElement || mapElement.dataset.initialized === 'true') return;
+
+  try {
+    const preview = mapElement.querySelector('.map-preview');
+    if (preview) preview.remove();
+
+    const myMap = new ymaps.Map('map', {
+      center: [57.762637, 40.957446],
+      zoom: 17,
+      controls: ['zoomControl']
+    });
+
+    // Метка
+    const placemark = new ymaps.Placemark([57.762637, 40.957446], {}, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/icons/map2.svg',
+      iconImageSize: [100, 100],
+      iconImageOffset: [-50, -50]
+    });
+
+    myMap.geoObjects.add(placemark);
+    mapElement.dataset.initialized = 'true';
+
+  } catch (error) {
+    console.error("Map init error:", error);
+  }
 }
 
 //========================================================================================================================================================
