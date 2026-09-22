@@ -2194,6 +2194,24 @@ document.addEventListener("click", function (e) {
 
 //========================================================================================================================================================
 
+const searchButton = document.querySelector('.button-search');
+const searchBlock = document.querySelector('.header-search');
+
+if (searchButton) {
+  searchButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    document.documentElement.classList.toggle('search-open');
+  });
+}
+
+document.addEventListener('click', (e) => {
+  if (searchBlock && !searchBlock.contains(e.target)) {
+    document.documentElement.classList.remove('search-open');
+  }
+});
+
+//========================================================================================================================================================
+
 // Добавление к шапке при скролле
 const header = document.querySelector('.header');
 if (header) {
