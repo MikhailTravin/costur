@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Результаты поиска</title>
+    {% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+    <div class="main-wrapper-outer">
+        {% include 'blocks/header.njk' %}
+        <main class="main">
+
+            <div class="block-main">
+                <img src="img/bg4.webp" alt="" class="block-main__bg1 bg2">
+                <img src="img/icons/line7.svg" alt="" class="block-main__line1">
+                <div class="container">
+                    <div class="block-main__content">
+                        <div class="breadcrumbs">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li><span>Результаты поиска</span></li>
+                            </ul>
+                        </div>
+                        <h1 class="title1">Результаты поиска</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block-category2">
+                <div class="container">
+                    <div class="block-category2__content">
+                        <div class="search-results">
+                            <div class="search-results__content">
+                                <div class="search-results__column">
+                                    <div class="search-results__title">
+                                        Направления:
+                                    </div>
+                                    <div data-showmore="items" class="search-results__showmore">
+                                        <ul data-showmore-content="3" class="search-results__body">
+                                            <li>
+                                                <a href="./">
+                                                    <div class="search-results__left">
+                                                        <div class="search-results__icon">
+                                                            <img loading="lazy" src="img/icons/map1.svg" alt="">
+                                                        </div>
+                                                        <p>
+                                                            Москва и окрестности <span>— 891 экскурсия</span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./">
+                                                    <div class="search-results__left">
+                                                        <div class="search-results__icon">
+                                                            <img loading="lazy" src="img/icons/map1.svg" alt="">
+                                                        </div>
+                                                        <p>
+                                                            Туры для школьников по Москве и окрестностям <span>— 97
+                                                                экскурсия </span>
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <button hidden data-showmore-button type="button" class="search-results__more">
+                                            <span>Показать еще</span>
+                                            <span>Скрыть</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="search-results__column">
+                                    <div class="search-results__title">
+                                        Туры:
+                                    </div>
+                                    <div data-showmore="items" class="search-results__showmore">
+                                        <ul data-showmore-content="3" class="search-results__body">
+                                            <li>
+                                                <a href="./">
+                                                    <div class="search-results__left">
+                                                        <div class="search-results__image">
+                                                            <img loading="lazy" src="img/products/image2.webp" alt="">
+                                                        </div>
+                                                        <p>
+                                                            Древнерусский квинтет за выходные: от Переславля-Залесского
+                                                            до
+                                                            Плёса
+                                                        </p>
+                                                    </div>
+                                                    <div class="search-results__price">
+                                                        от 2 400 ₽
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./">
+                                                    <div class="search-results__left">
+                                                        <div class="search-results__image">
+                                                            <img loading="lazy" src="img/products/image3.webp" alt="">
+                                                        </div>
+                                                        <p>
+                                                            Калуга, ты просто космос: комфортное путешествие
+                                                            в купеческом стиле (мини-группа)
+                                                        </p>
+                                                    </div>
+                                                    <div class="search-results__price">
+                                                        от 24 900 ₽
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./">
+                                                    <div class="search-results__left">
+                                                        <div class="search-results__image">
+                                                            <img loading="lazy" src="img/products/image1.webp" alt="">
+                                                        </div>
+                                                        <p>
+                                                            Тур-перезагрузка: трип из Владимира в Суздаль
+                                                            на 2 дня
+                                                        </p>
+                                                    </div>
+                                                    <div class="search-results__price">
+                                                        от 5 500 ₽
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="./">
+                                                    <div class="search-results__left">
+                                                        <div class="search-results__image">
+                                                            <img loading="lazy" src="img/products/image1.webp" alt="">
+                                                        </div>
+                                                        <p>
+                                                            Тур-перезагрузка: трип из Владимира в Суздаль
+                                                            на 2 дня
+                                                        </p>
+                                                    </div>
+                                                    <div class="search-results__price">
+                                                        от 5 500 ₽
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <button hidden data-showmore-button type="button" class="search-results__more">
+                                            <span>Показать еще</span>
+                                            <span>Скрыть</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-category2__body">
+                            <div class="block-category2__top">
+                                <div class="block-category2__results">
+                                    <span>87 туров и экскурсий</span>
+                                </div>
+                                <div class="block-category2__sorting">
+                                    <select name="form[]" class="select">
+                                        <option value="1" selected>По популярности</option>
+                                        <option value="2">По стоимости</option>
+                                        <option value="3">По рейтингу</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="block-category2__cards">
+                                <div data-filter="filter1" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/bus.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image1.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Праздник огурца в Суздале
+                                            </div>
+                                            <p>
+                                                День Огурца в Суздале — один из самых необычных и
+                                                ярких праздников, которые только вам доводилось
+                                                видеть.
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 2 400 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-filter="filter2" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/footprint.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image2.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Ожерелье московских усадеб
+                                            </div>
+                                            <p>
+                                                Про Царицыно сложено немало таинственных и пугающих
+                                                историй, что неудивительно, ведь и сама Екатерина
+                                                ...
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 12 900 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-filter="filter3" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/bus.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image3.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Почемучка в Москве
+                                            </div>
+                                            <p>
+                                                Отправляемся в Зоопарк. Здесь интересно и взрослым и
+                                                детям! Московский зоопарк- один из самых ...
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 1 500 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-filter="filter4" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/bus.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image3.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Почемучка в Москве
+                                            </div>
+                                            <p>
+                                                Отправляемся в Зоопарк. Здесь интересно и взрослым и
+                                                детям! Московский зоопарк- один из самых ...
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 1 500 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-filter="filter1" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/bus.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image1.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Праздник огурца в Суздале
+                                            </div>
+                                            <p>
+                                                День Огурца в Суздале — один из самых необычных и
+                                                ярких праздников, которые только вам доводилось
+                                                видеть.
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 2 400 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-filter="filter2" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/footprint.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image2.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Ожерелье московских усадеб
+                                            </div>
+                                            <p>
+                                                Про Царицыно сложено немало таинственных и пугающих
+                                                историй, что неудивительно, ведь и сама Екатерина
+                                                ...
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 12 900 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-filter="filter3" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/bus.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image1.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Праздник огурца в Суздале
+                                            </div>
+                                            <p>
+                                                День Огурца в Суздале — один из самых необычных и
+                                                ярких праздников, которые только вам доводилось
+                                                видеть.
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 2 400 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-filter="filter4" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/footprint.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image2.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Ожерелье московских усадеб
+                                            </div>
+                                            <p>
+                                                Про Царицыно сложено немало таинственных и пугающих
+                                                историй, что неудивительно, ведь и сама Екатерина
+                                                ...
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 12 900 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-filter="filter1" class="card-product filter-card">
+                                    <div class="card-product__image">
+                                        <div class="card-product__icon">
+                                            <img loading="lazy" src="img/icons/bus.svg" alt="">
+                                        </div>
+                                        <img loading="lazy" src="img/products/image3.webp" alt=""
+                                            class="card-product__pic1">
+                                    </div>
+                                    <div class="card-product__item">
+                                        <div class="card-product__descr">
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/calendar.svg" alt="">
+                                                    <span>c 19.07.2025</span>
+                                                </div>
+                                            </div>
+                                            <div class="card-product__texts">
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/people.svg" alt="">
+                                                    <span>с 8 лет</span>
+                                                </div>
+                                                <div class="card-product__text">
+                                                    <img loading="lazy" src="img/icons/time.svg" alt="">
+                                                    <span>2 часа</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-product__titles">
+                                            <div class="card-product__title">
+                                                Почемучка в Москве
+                                            </div>
+                                            <p>
+                                                Отправляемся в Зоопарк. Здесь интересно и взрослым и
+                                                детям! Московский зоопарк- один из самых ...
+                                            </p>
+                                        </div>
+                                        <div class="card-product__bottom">
+                                            <div class="card-product__price">
+                                                от 1 500 ₽
+                                            </div>
+                                            <a href="./" class="btn btn-blue">
+                                                <span>Подробнее</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% include 'blocks/pagging.njk' %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% include 'blocks/forms.njk' %}
+
+        </main>
+        {% include 'blocks/footer.njk' %}
+    </div>
+    {% include 'blocks/popups.njk' %}
+    {% include 'blocks/scripts.njk' %}
+</body>
+
+</html>

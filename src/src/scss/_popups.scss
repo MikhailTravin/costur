@@ -1,0 +1,176 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    transition: visibility 0.8s ease 0s;
+    visibility: hidden;
+    pointer-events: none;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media (max-width: 390px) {
+        padding: 20px 10px;
+    }
+}
+.popup_show {
+    z-index: 150;
+    visibility: visible;
+    overflow: auto;
+    pointer-events: auto;
+}
+.popup_show .popup__content {
+    visibility: visible;
+    transform: scale(1);
+}
+.popup__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup__content {
+    position: relative;
+    visibility: hidden;
+    transform: scale(0);
+    transition: transform 0.3s ease 0s;
+    width: 100%;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 4px solid var(--ffffff);
+    box-shadow: 0 12px 50px 0 rgba(49, 65, 88, 0.1);
+    overflow: hidden;
+    max-width: 500px;
+    padding: 45px 56px 56px 56px;
+    @media (max-width: 768px) {
+        padding: 45px 16px 16px 16px;
+    }
+    .lock & {
+        visibility: visible;
+    }
+}
+
+.popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background: var(--1659a7);
+    box-shadow: 0 12px 50px 0 rgba(49, 65, 88, 0.1);
+    border-radius: 50%;
+    svg {
+        fill: var(--ffffff);
+    }
+    @media (max-width: 768px) {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.popup-forms {
+    // .popup-forms__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 37px;
+        @media (max-width: 768px) {
+            gap: 25px;
+        }
+        .form {
+            flex-direction: column;
+            gap: 28px;
+            @media (max-width: 768px) {
+                gap: 20px;
+            }
+        }
+        .form__inputs {
+            flex-direction: column;
+        }
+        .form__input {
+            .input {
+                background-color: var(--ffffff);
+                border: 4px solid rgba(255, 255, 255, 0.3);
+                color: rgba(17, 24, 37, 1);
+                &::placeholder {
+                    color: rgba(17, 24, 37, 0.5);
+                }
+                &._form-focus {
+                    color: var(--ffffff);
+                    background-color: #5787c0;
+                    &::placeholder {
+                        color: var(--ffffff);
+                    }
+                }
+                &._form-error {
+                    border: 4px solid red;
+                }
+            }
+        }
+        .checkbox__text {
+            color: rgba(17, 24, 37, 0.7);
+            a {
+                color: rgba(17, 24, 37, 0.7);
+                &:hover {
+                    color: var(--111825);
+                }
+            }
+        }
+        .form__buttons {
+            flex: 0 1 auto;
+            gap: 28px;
+            @media (max-width: 768px) {
+                gap: 20px;
+            }
+        }
+    }
+
+    // .popup-forms__top
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        @media (max-width: 768px) {
+            gap: 10px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 136%;
+            text-align: center;
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    // .popup-forms__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 132%;
+        text-align: center;
+        @media (max-width: 768px) {
+            font-size: 28px;
+            line-height: 129%;
+        }
+    }
+}
