@@ -35,16 +35,6 @@
       z-index: 105;
     }
   }
-  .menu-open & {
-    &::before {
-      content: "";
-      opacity: 1;
-      pointer-events: auto;
-      @media (max-width: 768px) {
-        display: none;
-      }
-    }
-  }
 }
 
 .main {
