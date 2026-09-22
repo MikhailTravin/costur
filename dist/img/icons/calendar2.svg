@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+  <path fill-rule="evenodd" d="M5 0a1 1 0 0 1 1 1v1h3V1a1 1 0 0 1 2 0v1h3V1a1 1 0 0 1 2 0v1h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h2V1a1 1 0 0 1 1-1M4 4H2v2h16V4h-2a1 1 0 0 1-2 0h-3a1 1 0 0 1-2 0H6a1 1 0 0 1-2 0m14 4H2v10h16zM4 10h2.01v2.01H4zm5 0h2.01v2.01H9zm5 0h2.01v2.01H14zM4 14h2.01v2.01H4zm5 0h2.01v2.01H9zm5 0h2.01v2.01H14z" clip-rule="evenodd"/>
+  <path fill="url(#a)" fill-opacity=".2" fill-rule="evenodd" d="M5 0a1 1 0 0 1 1 1v1h3V1a1 1 0 0 1 2 0v1h3V1a1 1 0 0 1 2 0v1h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h2V1a1 1 0 0 1 1-1M4 4H2v2h16V4h-2a1 1 0 0 1-2 0h-3a1 1 0 0 1-2 0H6a1 1 0 0 1-2 0m14 4H2v10h16zM4 10h2.01v2.01H4zm5 0h2.01v2.01H9zm5 0h2.01v2.01H14zM4 14h2.01v2.01H4zm5 0h2.01v2.01H9zm5 0h2.01v2.01H14z" clip-rule="evenodd"/>
+  <defs>
+    <linearGradient id="a" x1="0" x2="22.967" y1="10" y2="10" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8C533" stop-opacity="0"/>
+      <stop offset="1" stop-color="#F8C533"/>
+    </linearGradient>
+  </defs>
+</svg>
