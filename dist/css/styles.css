@@ -9236,7 +9236,12 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 10px 30px;
+  gap: 5px 30px;
+}
+@media (max-width: 1336px) {
+  .spollers-menu {
+    gap: 5px 20px;
+  }
 }
 @media (max-width: 992px) {
   .spollers-menu {
