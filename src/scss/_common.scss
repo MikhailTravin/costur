@@ -740,6 +740,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
     transition: opacity 0.3s;
     @media (max-width: 768px) {
       width: 35px;
@@ -756,5 +758,28 @@ a {
         opacity: 0.7;
       }
     }
+  }
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 114.84%), var(--1659a7);
+  box-shadow: 0 12px 50px 0 rgba(49, 65, 88, 0.1);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 21;
+  pointer-events: none;
+  svg {
+    stroke: var(--ffffff);
+    color: var(--ffffff);
+    fill: none;
+    margin: 0px 0px 0px 3px !important;
   }
 }
