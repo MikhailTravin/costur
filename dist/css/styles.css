@@ -9752,6 +9752,9 @@ a {
 .popup-forms__body .form__input .input._form-focus::placeholder {
   color: var(--ffffff);
 }
+.popup-forms__body .form__input .input._form-error {
+  border: 4px solid red;
+}
 .popup-forms__body .checkbox__text {
   color: rgba(17, 24, 37, 0.7);
 }
