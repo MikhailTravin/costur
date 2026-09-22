@@ -9177,11 +9177,11 @@ a {
     position: absolute;
     z-index: 50;
     top: 100%;
-    right: 0;
-    width: 100%;
+    width: calc(100% + 40px);
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+    left: -20px;
     height: calc(100dvh - 95px);
     background: var(--ffffff);
     opacity: 0;
@@ -9206,11 +9206,6 @@ a {
 @media (max-width: 768px) {
   .header-menu {
     padding: 10px 20px 50px 20px;
-  }
-}
-@media (max-width: 359px) {
-  .header-menu {
-    padding: 10px 10px 30px 10px;
   }
 }
 .header-menu::before {
