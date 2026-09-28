@@ -3337,9 +3337,9 @@ a {
   }
 }
 .block-benefits1__pic1 {
-  height: 583px;
+  width: 307px;
   position: absolute;
-  width: auto;
+  height: auto;
   top: -51px;
   left: 0;
   z-index: 2;
@@ -3355,9 +3355,8 @@ a {
   }
 }
 .block-benefits1__pic2 {
-  height: 351px;
   position: absolute;
-  width: auto;
+  width: 140px;
   bottom: 0;
   right: 0;
   z-index: 2;
@@ -3966,8 +3965,8 @@ a {
   }
 }
 .block-forms__pic2 {
-  height: 254px;
-  width: auto;
+  height: auto;
+  width: 451px;
   position: absolute;
   bottom: -33px;
   right: -166px;
@@ -3975,7 +3974,7 @@ a {
 }
 @media (max-width: 992px) {
   .block-forms__pic2 {
-    height: 130px;
+    width: 230px;
     bottom: -10px;
     right: -87px;
   }
@@ -4144,9 +4143,9 @@ a {
 .block-faq__pic1 {
   position: absolute;
   top: -35px;
-  height: 634px;
+  width: 995px;
+  height: auto;
   left: -310px;
-  width: auto;
 }
 @media (max-width: 992px) {
   .block-faq__pic1 {
@@ -4612,6 +4611,8 @@ a {
 }
 
 .block-safety {
+  position: relative;
+  z-index: 16;
   background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(114.84%, rgba(255, 255, 255, 0.2))), var(--1659a7);
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 114.84%), var(--1659a7);
 }
@@ -4655,10 +4656,10 @@ a {
 }
 .block-safety__bg1 {
   position: absolute;
-  height: 390px;
+  width: 355px;
+  height: auto;
   right: -115px;
   bottom: -134px;
-  width: auto;
 }
 @media (max-width: 1600px) {
   .block-safety__bg1 {
