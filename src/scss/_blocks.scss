@@ -1604,6 +1604,11 @@
         right: -115px;
         bottom: -134px;
         @media (max-width: 1600px) {
+            width: 250px;
+            right: -70px;
+            bottom: -83px;
+        }
+        @media (max-width: 1330px) {
             display: none;
         }
     }
